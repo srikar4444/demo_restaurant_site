@@ -1,0 +1,67 @@
+(venv) E:\program_files\django_app_development\restaurant_site\restaurant_website>python manage.py shell
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from tags.models import Taga
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+ImportError: cannot import name 'Taga'
+>>> from tags.models import Tag
+>>> Tag.objects.all()
+<QuerySet [<Tag: veg>, <Tag: Nonveg>, <Tag: dessert>, <Tag: food>, <Tag: drink>, <Tag: sweets>, <Tag: sweet>, <Tag: snacks>, <Tag: fast-food>, <Tag: lunch>]>
+>>> val = Tag.objects.last()
+>>> val.title
+'lunch'
+>>> val.available
+False
+>>> val.featured
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Tag' object has no attribute 'featured'
+>>> val.slug
+'lunch-1'
+>>> val.timestamp
+datetime.datetime(2018, 4, 6, 11, 23, 42, 267639, tzinfo=<UTC>)
+>>> val.products
+<django.db.models.fields.related_descriptors.create_forward_many_to_many_manager.<locals>.ManyRelatedManager object at 0x0672B870>
+>>> val.products.all()
+<ProductQuerySetFeatured [<Product: Manchuria>, <Product: Biryani>, <Product: Manchuria>]>
+>>> val.products.all().first
+<bound method QuerySet.first of <ProductQuerySetFeatured [<Product: Manchuria>, <Product: Biryani>, <Product: Manchuria>]>>
+>>> val.products.all().first()
+<Product: Manchuria>
+>>> exiT()
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+NameError: name 'exiT' is not defined
+>>> exit()
+
+(venv) E:\program_files\django_app_development\restaurant_site\restaurant_website>python manage.py shell
+Python 3.6.4 (v3.6.4:d48eceb, Dec 19 2017, 06:04:45) [MSC v.1900 32 bit (Intel)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from products.models import Product
+>>> qs = Product.objects.all()
+>>> qs
+<ProductQuerySetFeatured [<Product: Veg samosa>, <Product: Manchuria>, <Product: jamun>, <Product: Biryani>, <Product: Lassi>, <Product: Manchuria>]>
+>>> qs.first()
+<Product: Veg samosa>
+>>> val = qs.first()
+>>> val
+<Product: Veg samosa>
+>>> val.title
+'Veg samosa'
+>>> val.description
+'Desi Alu samosa. Buy it'
+>>> val.tag
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Product' object has no attribute 'tag'
+>>> val.tags
+Traceback (most recent call last):
+  File "<console>", line 1, in <module>
+AttributeError: 'Product' object has no attribute 'tags'
+>>> val.tag_set.all()
+<QuerySet [<Tag: veg>, <Tag: food>, <Tag: snacks>, <Tag: fast-food>]>
+>>> val.tag_set.filter(title__iexact='snacks')
+<QuerySet [<Tag: snacks>]>

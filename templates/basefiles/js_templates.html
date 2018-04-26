@@ -1,0 +1,25 @@
+{% verbatim %}
+<!-- stripe template form -->
+<script id="stripeTemplate" type="text/x-jsrender">
+
+  <!-- because its in verbatimthe django code is modified to js render type code -->
+  <form class="payment-form" action="" method="post" id="payment-form" data-token = "{{:publishKey}}" data-next-url ='{{:nextUrl }}'>
+      <div class="form-row">
+        <label for="card-element">
+          Credit or debit card
+        </label>
+        <!-- class and data-token are added later on -->
+        <div id="card-element" class="form-control" >
+          <!-- A Stripe Element will be inserted here. -->
+        </div>
+
+        <!-- Used to display form errors. -->
+        <div id="card-errors" role="alert"></div>
+      </div>
+
+      <button class="btn btn-success my-3 btn-load">{{:btnTitle}}</button>
+    </form>
+
+</script>
+<!-- the name tag above is not django its jsrender so inorder to stop django reading that as django code we use this verbatim tags. Django ignores things in verbatim tags -->
+{% endverbatim %}

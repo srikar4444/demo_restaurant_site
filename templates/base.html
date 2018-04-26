@@ -1,0 +1,39 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    {% include 'basefiles/css.html' %}
+      {% block base_head %}
+      {% endblock %}
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    {% include 'basefiles/navbar.html' with brand_name='Restaurant' %}
+    <div class="container">
+        {% if messages %}
+            <div class="alert alert-success messages">
+                {% for message in messages %}
+                <span {% if message.tags %} class="{{ message.tags }}"{% endif %}>
+                    {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+                    {{ message }} <br/>
+                </span>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+      {% block content %}
+      {% endblock %}
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    {% include 'basefiles/js.html' %}
+    <!-- all the script that was made here in previous videos is moved to ecommerce.js file -->
+
+    {% block javascript %}
+    {% endblock %}
+  </body>
+</html>

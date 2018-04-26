@@ -1,0 +1,86 @@
+[
+{
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+        "title": "Veg samosa",
+        "slug": "veg",
+        "description": "Desi Alu samosa. Buy it",
+        "price": "4.99",
+        "image": "products/13790/13790.jpg",
+        "featured": true,
+        "available": true,
+        "timestamp": "2018-04-05T11:32:05.779Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+        "title": "Manchuria",
+        "slug": "manchuria",
+        "description": "Veg manchuria, chef's special",
+        "price": "15.00",
+        "image": "products/36303/36303.jpg",
+        "featured": true,
+        "available": true,
+        "timestamp": "2018-04-05T11:32:05.779Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+        "title": "jamun",
+        "slug": "dessert",
+        "description": "Best dessert of India",
+        "price": "10.00",
+        "image": "products/36733/36733.jpg",
+        "featured": true,
+        "available": true,
+        "timestamp": "2018-04-05T11:32:05.779Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+        "title": "Biryani",
+        "slug": "mix",
+        "description": "The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  \r\nThe best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish \r\nThe best Indian dish   The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish\r\nThe best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  \r\nThe best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish\r\nThe best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish   The best Indian dish The best Indian dish The best Indian dish The best Indian dish  \r\nThe best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  \r\nThe best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish  The best Indian dish The best Indian dish The best Indian dish The best Indian dish",
+        "price": "99.99",
+        "image": "products/5032/5032.jpg",
+        "featured": true,
+        "available": true,
+        "timestamp": "2018-04-05T11:32:05.779Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+        "title": "Lassi",
+        "slug": "abc",
+        "description": "The best lassi ever",
+        "price": "20.00",
+        "image": "products/34738/34738.jpg",
+        "featured": true,
+        "available": true,
+        "timestamp": "2018-04-05T11:32:05.779Z"
+    }
+},
+{
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+        "title": "Chicken Manchuria",
+        "slug": "manchuria-8bg0",
+        "description": "nonveg",
+        "price": "20.00",
+        "image": "products/42410/42410.jpg",
+        "featured": true,
+        "available": true,
+        "timestamp": "2018-04-05T11:32:05.779Z"
+    }
+}
+]
