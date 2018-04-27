@@ -25,6 +25,7 @@ SECRET_KEY = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
+# the . means any subdomain on herokuapp.com is allowed to host the site
 ALLOWED_HOSTS = ['.herokuapp.com']
 
 
@@ -108,6 +109,14 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# added this #https://www.codingforentrepreneurs.com/blog/go-live-with-django-project-and-heroku/
+# lecture 168
+# postgresql database for heroku
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 
 # Password validation
