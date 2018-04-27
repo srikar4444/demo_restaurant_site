@@ -102,7 +102,7 @@ WSGI_APPLICATION = 'restaurant_website.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -120,7 +120,7 @@ DATABASES = {
         'PORT': '8000',
     }
 }
-
+"""
 # added this #https://www.codingforentrepreneurs.com/blog/go-live-with-django-project-and-heroku/
 # lecture 168
 # postgresql database for heroku
