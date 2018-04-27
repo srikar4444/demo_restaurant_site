@@ -5,7 +5,6 @@
 srikar.sqlite3
 restaurant_website/settings/local.py
 restaurant_website/settings/local_srikar.py
-restaurant_website/settings/base.py
 important_settins.txt
 
 # Virtualenv related
