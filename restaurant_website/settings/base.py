@@ -109,6 +109,13 @@ DATABASES = {
     }
 }
 
+# added this #https://www.codingforentrepreneurs.com/blog/go-live-with-django-project-and-heroku/
+# lecture 168
+# postgresql database for heroku
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators

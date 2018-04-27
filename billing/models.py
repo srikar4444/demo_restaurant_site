@@ -41,7 +41,7 @@ class BillingProfielManager(models.Manager):
 # user email@gmail.com --> 1 billing profile
 class BillingProfile(models.Model):
     # we can consider the billing as a Foreignkey with unique as True or just consider OneToOneField
-    user        = models.ForeignKey(User,unique=True, null=True, blank= True,on_delete= models.CASCADE )
+    user        = models.OneToOneField(User,unique=True, null=True, blank= True,on_delete= models.CASCADE )
     email       = models.EmailField()
     active      = models.BooleanField(default=True)
     updated     = models.DateTimeField(auto_now_add=True)
@@ -234,7 +234,7 @@ class ChargeManager(models.Manager):
 
 
 class Charge(models.Model):
-    billing_profile         = models.ForeignKey(BillingProfile, null=True, on_delete=models.CASCADE)
+    billing_profile         = models.OneToOneField(BillingProfile, null=True, on_delete=models.CASCADE)
     stripe_id               = models.CharField(max_length=120, blank=False)
     paid                    = models.BooleanField(default = False)
     refunded                = models.BooleanField(default=False)
