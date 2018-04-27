@@ -41,8 +41,11 @@ def object_viewed_receiver(sender, instance, request, *args, **kwargs):
     #print(instance)
     #print(request)
     #print(request.user)
+    user = None
+    if request.user.is_authenticated:
+        user = request.user
     new_view_obj = ObjectViewed.objects.create(
-            user = request.user,
+            user = user,
             object_id  = instance.id,
             content_type = c_type,
         # advantages of collecting the ip addresses is we can parse it and get the location of users and show the content
