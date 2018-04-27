@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 
 ]
 
-AUTH_USER_MODEL = 'accounts.User' # changes the built-in User model to ours
+AUTH_USER_MODEL = 'accounts.models.User' # changes the built-in User model to ours
 
 # below two force things are defined in analytics\models for checking the session when user is logged in
 FORCE_SESSION_TO_ONE = False
