@@ -41,7 +41,7 @@ class BillingProfielManager(models.Manager):
 # user email@gmail.com --> 1 billing profile
 class BillingProfile(models.Model):
     # we can consider the billing as a Foreignkey with unique as True or just consider OneToOneField
-    user        = models.OneToOneField(User,unique=True, null=True, blank= True,on_delete= models.CASCADE )
+    user        = models.ForeignKey(User,unique=True, null=True, blank= True,on_delete= models.CASCADE )
     email       = models.EmailField()
     active      = models.BooleanField(default=True)
     updated     = models.DateTimeField(auto_now_add=True)
